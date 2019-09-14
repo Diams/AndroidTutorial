@@ -29,6 +29,6 @@ https://developer.android.com/studio/install?hl=ja を参照
 2. メインメニューから `File` を選択
 3. `Open` を選択
 4. ダイアログから`Android Tutorial` のディレクトリを選択
-5. 右上のボタンから`?` (実行ボタン) を押下
+5. 右上のメニューから実行ボタンを押下
 6. `Connected Devices` の中からPCに接続した実機を選択
 7. 実機にアプリケーションがインストールされ、自動で起動する
