@@ -1,12 +1,15 @@
 package diams.mydns.jp.androidtutorial
 
 import android.content.Context
+import android.content.res.Resources
+import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.util.Log
 import android.widget.TextView
 
@@ -45,6 +48,13 @@ class MainActivity : AppCompatActivity() {
                     sensorEvent.values[2])    // Z方向の加速度センサの値
 
                 findViewById<TextView>(R.id.main_acceleration_textView).text = accel_text
+
+                val container = findViewById<ConstraintLayout>(R.id.main_container_constraintLayout)
+                if (true) { // 端末が下を向いていたら
+                    container.setBackgroundColor(resources.getColor(R.color.colorUpsideDown, theme))
+                } else {    // そうでなければ
+                    container.setBackgroundColor(Color.WHITE)
+                }
             }
         }
 
