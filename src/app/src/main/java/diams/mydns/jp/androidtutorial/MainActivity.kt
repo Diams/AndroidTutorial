@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.main_acceleration_textView).text = accel_text
 
                 val container = findViewById<ConstraintLayout>(R.id.main_container_constraintLayout)
-                if (true) { // 端末が下を向いていたら
+                if (sensorEvent.values[1] < -6.5) { // 端末が下を向いていたら
                     container.setBackgroundColor(resources.getColor(R.color.colorUpsideDown, theme))
                 } else {    // そうでなければ
                     container.setBackgroundColor(Color.WHITE)
