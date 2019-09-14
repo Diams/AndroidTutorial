@@ -32,5 +32,3 @@ https://developer.android.com/studio/install?hl=ja を参照
 5. 右上のボタンから`?` (実行ボタン) を押下
 6. `Connected Devices` の中からPCに接続した実機を選択
 7. 実機にアプリケーションがインストールされ、自動で起動する
-
-## 画面を作る
