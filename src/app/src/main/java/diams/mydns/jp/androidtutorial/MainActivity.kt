@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity() {
                     "x:%f\n" +
                     "y:%f\n" +
                     "z:%f",
-                    0.0,    // X方向の加速度センサの値
-                    0.0,    // Y方向の加速度センサの値
-                    0.0)    // Z方向の加速度センサの値
+                    sensorEvent.values[0],    // X方向の加速度センサの値
+                    sensorEvent.values[1],    // Y方向の加速度センサの値
+                    sensorEvent.values[2])    // Z方向の加速度センサの値
 
                 findViewById<TextView>(R.id.main_acceleration_textView).text = accel_text
             }
