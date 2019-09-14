@@ -1,7 +1,6 @@
 package diams.mydns.jp.androidtutorial
 
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -10,7 +9,7 @@ import android.hardware.SensorManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
-import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
+        // RESETボタンが押された時の処理
+        // 振られた状態を元に戻す
+        findViewById<Button>(R.id.main_reset_button).setOnClickListener {
+            findViewById<TextView>(R.id.main_shake_textView).text = resources.getText(R.string.non_shake)
+        }
     }
 
     override fun onResume() {

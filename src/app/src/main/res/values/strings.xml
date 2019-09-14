@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AndroidTutorial</string>
     <string name="initialized_text_textView">x:\ny:\nz:</string>
+    <string name="reset_button_text">reset</string>
+    <string name="on_shake">振られた</string>
+    <string name="non_shake">振られてない</string>
 </resources>
